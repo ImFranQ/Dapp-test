@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dapp</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-3">
+    <div class="text-center">
+      <button id="connectMetamask" class="btn btn-primary">Connect with metamask</button>
+      <div class="card card-body d-none" id="accountSelected"></div>
+    </div>
+
+    <hr>
+
+    <div class="input-group mb-3">
+      <input
+        id="balanceAddressInput"
+        type="text"
+        class="form-control"
+        placeholder="Get address balance"
+        aria-label="Get address balance"
+        aria-describedby="basic-addon2"
+        disabled
+      >
+      <div class="input-group-append">
+        <button
+          id="getBalanceBtn"
+          class="btn btn-primary"
+          type="button"
+          disabled
+        >Get Balance</button>
+      </div>
+      <div class="input-group-append">
+        <span id="addresBalance" class="input-group-text">0.00</span>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-12 mb-3">
+        <div class="input-group">
+          <input
+            id="transferAddressInput"
+            type="text"
+            class="form-control"
+            placeholder="Address to transfer"
+            aria-describedby="basic-addon2"
+            disabled
+          >
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input
+            id="transferAmountInput"
+            type="text"
+            class="form-control"
+            placeholder="Amount to transfer"
+            aria-describedby="basic-addon2"
+            disabled
+          >
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <button
+            id="sendTransferButton"
+            class="btn btn-primary w-100"
+            type="button"
+            disabled
+          >Transfer</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/web3/dist/web3.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
